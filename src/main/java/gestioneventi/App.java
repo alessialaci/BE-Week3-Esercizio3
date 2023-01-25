@@ -6,6 +6,7 @@ import dao.EventoDAO;
 import dao.LocationDAO;
 import dao.PartecipazioneDAO;
 import dao.PersonaDAO;
+
 import models.Evento;
 import models.Location;
 import models.Partecipazione;
@@ -62,8 +63,8 @@ public class App {
 	
 	private static Partecipazione savePartecipazione(Evento evento, Persona persona) {
 		Partecipazione partecipazione = new Partecipazione();
-		partecipazione.setPersona(persona);
 		partecipazione.setEvento(evento);
+		partecipazione.setPersona(persona);
 		partecipazione.setStato(Stato.CONFERMATA);
 		
 		PartecipazioneDAO partecipazioneDao = new PartecipazioneDAO();

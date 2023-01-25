@@ -15,7 +15,7 @@ public class PartecipazioneDAO {
 	private static final Logger logger = LoggerFactory.getLogger(EventoDAO.class);
 	private static final EntityManager em = JpaUtil.getEntityManager();
 
-	public void save(models.Partecipazione object) {
+	public void save(Partecipazione object) {
 		try {
 			EntityTransaction transaction = em.getTransaction();
 			
